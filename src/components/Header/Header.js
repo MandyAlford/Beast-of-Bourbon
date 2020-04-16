@@ -11,15 +11,13 @@ const Header = () => {
       </div>
       <div className='greeting'>
         <h2>Welcome, Bourbon Lover!</h2>
-      </div>
-      <div>
           <button
             aria-label = 'Favorites'
             className = 'nav-button'
             >
             View Favorites
           </button>
-      </div>    
+      </div>
     </div>
   )
 }

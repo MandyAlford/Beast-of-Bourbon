@@ -1,4 +1,5 @@
 .nav-bourbon {
+  font-family: 'Anton', sans-serif;
   height: 2em;
   padding-top: 1.4em;
   padding-left: .5em;
@@ -6,10 +7,13 @@
 
 .header {
   align-items: center;
-  /* background-color: black; */
-  color: #FF532D;
+  color: #FFD2AD;
   display: flex;
   justify-content: space-between;
+}
+
+.greeting {
+  display: flex;
 }
 
 .logo-nav {
@@ -22,8 +26,10 @@
   text-transform: uppercase;
   text-decoration: none;
   background: #FF532D;
-  padding: 1em;
+  height: 2em;
   border-radius: 50px;
+  margin-left: 1em;
+  margin-top: 2em;
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
