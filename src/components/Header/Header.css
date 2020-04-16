@@ -1,13 +1,13 @@
 .nav-bourbon {
   font-family: 'Anton', sans-serif;
-  height: 2em;
+  height: 1.8em;
   padding-top: 1.4em;
   padding-left: .5em;
 }
 
 .header {
   align-items: center;
-  color: #FFD2AD;
+  color: #FDF9EC;
   display: flex;
   justify-content: space-between;
 }
@@ -30,6 +30,7 @@
   border-radius: 50px;
   margin-left: 1em;
   margin-top: 2em;
+  margin-right: 1em;
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
