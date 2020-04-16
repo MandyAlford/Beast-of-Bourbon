@@ -1,0 +1,44 @@
+.nav-bourbon {
+  font-family: 'Anton', sans-serif;
+  height: 1.8em;
+  padding-top: 1.4em;
+  padding-left: .5em;
+}
+
+.header {
+  align-items: center;
+  color: #FDF9EC;
+  display: flex;
+  justify-content: space-between;
+}
+
+.greeting {
+  display: flex;
+}
+
+.logo-nav {
+  display: flex;
+  font-family: 'Anton', sans-serif;
+}
+
+.nav-button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #FF532D;
+  height: 2em;
+  border-radius: 50px;
+  margin-left: 1em;
+  margin-top: 2em;
+  margin-right: 1em;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.nav-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
