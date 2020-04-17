@@ -1,0 +1,24 @@
+.drink-card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 1% 0;
+  min-height: 200px;
+  padding: 1% 0;
+  text-align: center;
+  text-align: center;
+  width: 35%;
+}
+
+.drink-card-image {
+  height: 75%;
+  margin: 0 0 2% 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.drink-card-header {
+    margin: 0 0 1% 0;
+}
