@@ -1,9 +1,13 @@
 import React from "react";
 import "./DrinkCard.css";
 
-const DrinkCard = () => {
+const DrinkCard = (props) => {
   return (
-    <p>I'm a drink card</p>
+    <div className='drink-card'>
+      <h1>{props.name}</h1>
+      <img className='drink-card-image' src={props.image}
+      />
+    </div>
   )
 }
 
