@@ -4,6 +4,7 @@ import bartender from "../../assets/bartender.jpg";
 import DrinkCard from "../DrinkCard/DrinkCard";
 import { getDrinks } from '../../Actions';
 import { connect } from 'react-redux';
+import { fetchDrinks } from '../../ApiCalls/ApiCalls'
 
 class CardContainer extends Component {
   constructor() {
@@ -11,29 +12,18 @@ class CardContainer extends Component {
   }
 
   componentDidMount() {
-    const fetchResults = {
-      "drinks": [
-        {
-          "strDrink": "Allegheny",
-          "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uwvyts1483387934.jpg",
-          "idDrink": "11021"
-        },
-        {
-          "strDrink": "Bourbon Sour",
-          "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/dms3io1504366318.jpg",
-          "idDrink": "11147"
-        }
-      ]
-    }
-
-    this.props.setDrinks(fetchResults.drinks)
-
+    fetchDrinks().then((data) => {
+      this.props.setDrinks(data.drinks)
+    })
   }
 
   render() {
+    const drinkCards = this.props.drinks.map(drink => <DrinkCard name={drink.strDrink}
+    image={drink.strDrinkThumb}
+      />)
     return(
       <div className='card-container'>
-        <DrinkCard />
+        {drinkCards}
       </div>
     )
   }
@@ -43,4 +33,8 @@ const mapDispatchToProps = dispatch => ({
   setDrinks: data => dispatch( getDrinks(data) )
 })
 
-export default connect(null, mapDispatchToProps)(CardContainer);
+const mapStateToProps = state => ({
+  drinks: state.drinks
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
