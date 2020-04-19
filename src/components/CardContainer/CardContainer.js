@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./CardContainer.css";
-import bartender from "../../assets/bartender.jpg";
-import DrinkCard from "../DrinkCard/DrinkCard";
+import './CardContainer.css';
+import bartender from '../../assets/bartender.jpg';
+import DrinkCard from '../DrinkCard/DrinkCard';
 import { getDrinks } from '../../Actions';
 import { connect } from 'react-redux';
 import { fetchDrinks } from '../../ApiCalls/ApiCalls'

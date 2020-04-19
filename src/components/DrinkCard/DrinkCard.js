@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./DrinkCard.css";
+import React, { Component } from 'react';
+import './DrinkCard.css';
 import { fetchDrinkRecipe } from '../../ApiCalls/ApiCalls';
 import { getDrinkRecipe } from '../../Actions';
 import { connect } from 'react-redux';
@@ -15,6 +15,10 @@ getDrinkDetails = (event) => {
   fetchDrinkRecipe(drinkId).then((data) => {
     this.props.setCurrentRecipe(data.drinks[0])
     this.props.history.push(`/drinks/${drinkId}`)
+    // setTimeout(() => {
+    //   debugger
+    //   this.props.history.push(`/drinks/${drinkId}`)
+    // }, 1000)
   })
   // take the id from parent element,
   // interpolate the id into fetch request and fetch data
