@@ -4,10 +4,11 @@ class RecipeConverter {
     this.drink = sampleDrink;
   }
   orangizeIngredients(){
-    // check all key/value pairs, remove any null
+    // check all key/value pairs, remove any null vals
     // if ingredient or measure with matching number, put into array
-    // onj.keys
+    // obj.keys
     //
+
     let keys = Object.keys(this.drink)
 
     return keys.reduce((acc, key) => {
