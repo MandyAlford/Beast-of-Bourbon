@@ -3,6 +3,7 @@ import "./DrinkCard.css";
 import { fetchDrinkRecipe } from '../../ApiCalls/ApiCalls';
 import { getDrinkRecipe } from '../../Actions';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class DrinkCard extends Component {
   constructor(){
@@ -13,6 +14,7 @@ getDrinkDetails = (event) => {
   let drinkId = event.target.parentElement.id
   fetchDrinkRecipe(drinkId).then((data) => {
     this.props.setCurrentRecipe(data.drinks[0])
+    this.props.history.push(`/drinks/${drinkId}`)
   })
   // take the id from parent element,
   // interpolate the id into fetch request and fetch data
@@ -37,4 +39,4 @@ const mapDispatchToProps = dispatch => ({
   setCurrentRecipe: data => dispatch( getDrinkRecipe(data) )
 })
 
-export default connect(null, mapDispatchToProps)(DrinkCard);
+export default connect(null, mapDispatchToProps)(withRouter(DrinkCard));

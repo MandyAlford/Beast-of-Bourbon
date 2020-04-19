@@ -17,6 +17,9 @@ class App extends Component {
         <Header />
         <CardContainer />
       </Route>
+      <Route path='/drinks/:drink_id'>
+        <Header />
+      </Route>
       </main>
     )
   }
