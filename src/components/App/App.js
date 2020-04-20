@@ -5,6 +5,7 @@ import { Route, Link } from "react-router-dom";
 import Header from "../Header/Header";
 import CardContainer from "../CardContainer/CardContainer";
 import DrinkRecipe from '../DrinkRecipe/DrinkRecipe';
+import Favorites from "../Favorites/Favorites";
 
 class App extends Component {
   constructor() {
@@ -21,6 +22,10 @@ class App extends Component {
       <Route path='/drinks/:drink_id'>
         <Header />
         <DrinkRecipe />
+      </Route>
+      <Route path='/favorites'>
+        <Header />
+        <Favorites />
       </Route>
       </main>
     )
