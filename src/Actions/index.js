@@ -8,7 +8,9 @@ export const getDrinkRecipe = (drinkRecipe) => ({
     drinkRecipe
   });
 
-export const addDrinkToFavorites = (id) => ({
-  type: 'ADD_FAVORITE',
-  id
-});
+export const addDrinkToFavorites = (id) => {
+  return ({
+    type: 'ADD_FAVORITE',
+    id
+  });
+}
