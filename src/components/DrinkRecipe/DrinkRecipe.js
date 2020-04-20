@@ -10,9 +10,8 @@ class DrinkRecipe extends Component {
     super();
   }
 
-  addFavorite = (event) => {
-    // event.preventDefault()
-    let favorite = event.target.id;
+  addFavorite = () => {
+    let favorite = this.props.recipe;
     this.props.favorites(favorite)
   }
 
@@ -46,14 +45,9 @@ class DrinkRecipe extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    recipe: state.recipe
-  }
-};
 
 const mapDispatchToProps = dispatch => ({
   favorites: data => dispatch( addDrinkToFavorites(data) )
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(DrinkRecipe);
+export default connect(null, mapDispatchToProps)(DrinkRecipe);
