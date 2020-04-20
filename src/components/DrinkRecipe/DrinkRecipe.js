@@ -2,6 +2,8 @@ import React from "react";
 import "./DrinkRecipe.css";
 import { connect } from "react-redux";
 import RecipeConverter from '../../util/RecipeConverter';
+import rootReducer from '../../reducers'
+import { addDrinkToFavorites } from '../../Actions';
 
 const DrinkRecipe = (props) => {
   if(Object.keys(props.recipe).length > 0) {
@@ -38,4 +40,8 @@ const mapStateToProps = (state) => {
   }
 };
 
-export default connect(mapStateToProps)(DrinkRecipe);
+const mapDispatchToProps = dispatch => ({
+  favorites: data => dispatch( addDrinkToFavorites(data) )
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(DrinkRecipe);
