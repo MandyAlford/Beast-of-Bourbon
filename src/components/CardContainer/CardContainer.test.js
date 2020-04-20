@@ -6,6 +6,7 @@ import { render, fireEvent, waitFor } from "@testing-library/react";
 import { fetchDrinks } from '../../ApiCalls/ApiCalls';
 import CardContainer from './CardContainer';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
 jest.mock('../../ApiCalls/ApiCalls');
 import { createStore } from 'redux';
 import rootReducer from '../../reducers'
@@ -35,7 +36,9 @@ describe('CardContainer', () => {
 
     const { getByText } = render(
       <Provider store={store}>
-        <CardContainer />
+        <BrowserRouter>
+          <CardContainer />
+        </BrowserRouter>
       </Provider>
     )
 
