@@ -8,8 +8,8 @@ export const getDrinkRecipe = (drinkRecipe) => ({
     drinkRecipe
   });
 
-export const addDrinkToFavorites = (recipe) => ({
-    type: 'ADD_FAVORITE',
+export const toggleFavoriteRecipe = (recipe) => ({
+    type: 'TOGGLE_FAVORITE',
     recipe
   });
 
