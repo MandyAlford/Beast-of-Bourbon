@@ -3,16 +3,16 @@ import "./DrinkRecipe.css";
 import { connect } from "react-redux";
 import RecipeConverter from '../../util/RecipeConverter';
 import rootReducer from '../../reducers'
-import { addDrinkToFavorites } from '../../Actions';
+import { toggleFavoriteRecipe } from '../../Actions';
 
 class DrinkRecipe extends Component {
   constructor() {
     super();
   }
 
-  addFavorite = () => {
+  toggleFavorite = () => {
     let favorite = this.props.recipe;
-    this.props.favorites(favorite)
+    this.props.toggleFavorite(favorite)
   }
 
   render() {
@@ -32,7 +32,7 @@ class DrinkRecipe extends Component {
             <p>Ingredients:</p>
             <ul> { ingredientElements } </ul>
             <p>{this.props.recipe.strInstructions}</p>
-            <button className='add-favorite-button' id={this.props.recipe.idDrink} onClick={this.addFavorite}>Add Favorite</button>
+            <button className='add-favorite-button' id={this.props.recipe.idDrink} onClick={this.toggleFavorite}>Add Favorite</button>
           </div>
           <div>
             <img className='drink-recipe-image' src={this.props.recipe.strDrinkThumb} alt={`${this.props.recipe.strDrink}-image`}/>
@@ -45,9 +45,8 @@ class DrinkRecipe extends Component {
   }
 }
 
-
 const mapDispatchToProps = dispatch => ({
-  favorites: data => dispatch( addDrinkToFavorites(data) )
+  toggleFavorite: data => dispatch( toggleFavoriteRecipe(data) )
 })
 
 export default connect(null, mapDispatchToProps)(DrinkRecipe);
