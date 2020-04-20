@@ -7,3 +7,8 @@ export const getDrinkRecipe = (drinkRecipe) => ({
     type: 'GET_RECIPE',
     drinkRecipe
   });
+
+export const addDrinkToFavorites = (id) => ({
+  type: 'ADD_FAVORITE',
+  id
+});
