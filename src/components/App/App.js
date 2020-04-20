@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import CardContainer from "../CardContainer/CardContainer";
 import DrinkRecipe from '../DrinkRecipe/DrinkRecipe';
 import Favorites from "../Favorites/Favorites";
+import { connect } from "react-redux";
 
 class App extends Component {
   constructor() {
@@ -21,7 +22,7 @@ class App extends Component {
       </Route>
       <Route path='/drinks/:drink_id'>
         <Header />
-        <DrinkRecipe />
+        <DrinkRecipe recipe={this.props.recipe}/>
       </Route>
       <Route path='/favorites'>
         <Header />
@@ -32,4 +33,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    recipe: state.recipe
+  }
+};
+
+export default connect(mapStateToProps)(App);
