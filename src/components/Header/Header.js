@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 const Header = (props) => {
   return (
     <div className='header'>
-      <div className='logo-nav'>
+      <div className='logo-nav' onClick={() => props.history.push(`/`)}>
         <img className='nav-bourbon' src={bourbon} alt='bourbon-logo' />
         <h1 className='nav-title'>Beast of Bourbon</h1>
       </div>
