@@ -13,14 +13,18 @@ const DrinkRecipe = (props) => {
     })
     return(
       <div className='drink-recipe' id={props.recipe.idDrink}>
-        <h2>{props.recipe.strDrink}</h2>
-        <p>Type: {props.recipe.strCategory}</p>
-        <p>Glassware: {props.recipe.strGlass}</p>
-        <p>Ingredients:</p>
-        <ul> { ingredientElements } </ul>
-        <p>{props.recipe.strInstructions}</p>
-        <img className='drink-recipe-image' src={props.recipe.strDrinkThumb} alt={`${props.recipe.strDrink}-image`}/>
-        <button className='add-favorite-button'>Add Favorite</button>
+        <div className='recipe-details'>
+          <h2>{props.recipe.strDrink}</h2>
+          <p>Type: {props.recipe.strCategory}</p>
+          <p>Glassware: {props.recipe.strGlass}</p>
+          <p>Ingredients:</p>
+          <ul> { ingredientElements } </ul>
+          <p>{props.recipe.strInstructions}</p>
+          <button className='add-favorite-button'>Add Favorite</button>
+        </div>
+        <div>
+          <img className='drink-recipe-image' src={props.recipe.strDrinkThumb} alt={`${props.recipe.strDrink}-image`}/>
+        </div>
       </div>
     )
   } else {

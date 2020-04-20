@@ -1,3 +1,17 @@
 .drink-recipe {
   color: white;
+  display: flex;
+  text-align: justify;
+  align-content: flex-start;
+}
+
+.drink-recipe-image {
+  border-radius: 5%;
+  height: 30%;
+  margin: 5% 5% 5% 10%;
+}
+
+.recipe-details {
+  margin-left: 5%;
+  width: 60%;
 }
