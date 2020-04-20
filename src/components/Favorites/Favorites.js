@@ -3,6 +3,7 @@ import './Favorites.css';
 import { connect } from 'react-redux';
 import { fetchDrinkRecipe } from '../../ApiCalls/ApiCalls';
 import { Route, withRouter } from 'react-router-dom';
+import DrinkRecipe from '../DrinkRecipe/DrinkRecipe';
 
 class Favorites extends Component {
   constructor() {
@@ -10,10 +11,14 @@ class Favorites extends Component {
   }
 
   render() {
-    return(
-      <p>I am a favorite</p>
-    )
+    return this.props.favorites.map(favorite => {
+      return <DrinkRecipe recipe={favorite}/>
+    })
   }
 }
 
-export default withRouter(Favorites);
+const mapStateToProps = state => ({
+  favorites: state.favorites
+})
+
+export default connect(mapStateToProps)(withRouter(Favorites));
