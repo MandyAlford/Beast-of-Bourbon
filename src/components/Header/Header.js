@@ -13,7 +13,6 @@ const Header = () => {
         <h2>Welcome, Bourbon Lover!</h2>
           <button
             aria-label = 'Favorites'
-            className = 'nav-button'
             >
             View Favorites
           </button>
