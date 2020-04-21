@@ -1,7 +1,5 @@
-// import DrinkCard from '../DrinkCard/DrinkCard';
 import React from 'react';
 import '@testing-library/jest-dom';
-// import { render, waitFor } from '@testing-library/react';
 import { render, fireEvent, waitFor } from "@testing-library/react";
 import { fetchDrinks } from '../../ApiCalls/ApiCalls';
 import CardContainer from './CardContainer';

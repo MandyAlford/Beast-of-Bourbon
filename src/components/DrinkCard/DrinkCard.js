@@ -15,17 +15,7 @@ getDrinkDetails = (event) => {
   fetchDrinkRecipe(drinkId).then((data) => {
     this.props.setCurrentRecipe(data.drinks[0])
     this.props.history.push(`/drinks/${drinkId}`)
-    // setTimeout(() => {
-    //   debugger
-    //   this.props.history.push(`/drinks/${drinkId}`)
-    // }, 1000)
   })
-  // take the id from parent element,
-  // interpolate the id into fetch request and fetch data
-  // set recipe in store
-  // go to new route path
-  // display drink recipe pn page
-
 }
 
 render() {
