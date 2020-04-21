@@ -7,6 +7,7 @@ import { toggleFavoriteRecipe } from '../../Actions';
 
 class DrinkRecipe extends Component {
   constructor() {
+    console.log('in DrinkRecipe')
     super();
   }
 

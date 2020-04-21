@@ -12,7 +12,3 @@ export const toggleFavoriteRecipe = (recipe) => ({
     type: 'TOGGLE_FAVORITE',
     recipe
   });
-
-// export const getFavoriteDrinks = () => ({
-//   type: 'GET_FAVORITES'
-// })
