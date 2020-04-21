@@ -21,7 +21,7 @@ getDrinkDetails = (event) => {
 
 render() {
   return (
-    <div className='drink-card' id={this.props.id} onClick={this.getDrinkDetails}>
+    <div className='drink-card' id={this.props.id} key={`${this.props.id}a`} onClick={this.getDrinkDetails}>
       <h1 className='drink-card-header'>{this.props.name}</h1>
       <img className='drink-card-image' src={this.props.image} alt={`${this.props.name}-image`}
       />

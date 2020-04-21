@@ -11,8 +11,10 @@ class Favorites extends Component {
   }
 
   render() {
-    return this.props.favorites.map(favorite => {
-      return <DrinkRecipe recipe={favorite}/>
+    return this.props.favorites.map((favorite, index )=> {
+      return <DrinkRecipe
+      recipe={favorite}
+      key={index}/>
     })
   }
 }

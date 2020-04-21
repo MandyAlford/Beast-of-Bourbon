@@ -81,7 +81,6 @@ describe('App', () => {
     await waitFor(() => expect(getByText('Allegheny')).toBeInTheDocument());
     await waitFor(() => expect(getByText('Bourbon Sour')).toBeInTheDocument());
 
-    // console.log(getByText('Allegheny'))
     fireEvent.click(getByText('Allegheny'))
     await waitFor(() => expect(getByText('Glassware: Cocktail glass')).toBeInTheDocument());
     expect(getByText('Favorite')).toBeInTheDocument();
@@ -97,7 +96,5 @@ describe('App', () => {
     fireEvent.click(getByText('View Favorites'))
     await waitFor(() => expect(getByText('Allegheny')).toBeInTheDocument());
     await waitFor(() => expect(getByText('Bourbon Sour')).toBeInTheDocument());
-     // favorite a drinks
-     // see that it is listed in favorites page
   })
 })

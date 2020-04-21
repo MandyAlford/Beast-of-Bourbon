@@ -21,6 +21,7 @@ class CardContainer extends Component {
     const drinkCards = this.props.drinks.map(drink => <DrinkCard name={drink.strDrink}
     image={drink.strDrinkThumb}
     id={drink.idDrink}
+    key={drink.idDrink}
       />)
     return(
       <div className='card-container'>

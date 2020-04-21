@@ -7,7 +7,6 @@ import { toggleFavoriteRecipe } from '../../Actions';
 
 class DrinkRecipe extends Component {
   constructor() {
-    console.log('in DrinkRecipe')
     super();
   }
 
@@ -21,11 +20,11 @@ class DrinkRecipe extends Component {
       let recipeConverter = new RecipeConverter(this.props.recipe)
       let recipeIngredients = recipeConverter.orangizeIngredients()
 
-      let ingredientElements = recipeIngredients.map(ingredient => {
-        return <li>{ingredient}</li>
+      let ingredientElements = recipeIngredients.map((ingredient, index) => {
+        return <li key={index}>{ingredient}</li>
       })
       return(
-        <div className='drink-recipe' id={this.props.recipe.idDrink}>
+        <div className='drink-recipe' id={this.props.recipe.idDrink} key={Date.now()}>
           <div className='recipe-details'>
             <h2>{this.props.recipe.strDrink}</h2>
             <p>Type: {this.props.recipe.strCategory}</p>

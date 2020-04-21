@@ -1,7 +1,11 @@
 export const drinks = (state = [], action) => {
   switch (action.type) {
     case 'GET_DRINKS':
-      return [...state, ...action.drinks]
+      if(state.length === 0) {
+        return [...state, ...action.drinks]
+      } else {
+        return state;
+      }
     default:
       return state;
   }
