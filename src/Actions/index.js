@@ -7,3 +7,12 @@ export const getDrinkRecipe = (drinkRecipe) => ({
     type: 'GET_RECIPE',
     drinkRecipe
   });
+
+export const toggleFavoriteRecipe = (recipe) => ({
+    type: 'TOGGLE_FAVORITE',
+    recipe
+  });
+
+// export const getFavoriteDrinks = () => ({
+//   type: 'GET_FAVORITES'
+// })

@@ -1,8 +1,9 @@
 .drink-recipe {
   color: white;
   display: flex;
+  height: 500px;
   text-align: justify;
-  align-content: flex-start;
+  align-content: space-between;
 }
 
 .drink-recipe-image {
@@ -13,5 +14,15 @@
 
 .recipe-details {
   margin-left: 5%;
-  width: 60%;
+  width: 70%;
+}
+
+.image-wrapper {
+  width: 30%;
+}
+
+.error-message {
+  color: white;
+  padding-bottom: 50%;
+  padding-left: 5%;
 }
