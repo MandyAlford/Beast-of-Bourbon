@@ -21,6 +21,10 @@
   font-family: 'Anton', sans-serif;
 }
 
+.logo-nav:hover {
+  color: #FF532D;
+}
+
 button {
   color: #fff;
   text-transform: uppercase;

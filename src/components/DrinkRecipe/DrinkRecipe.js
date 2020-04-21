@@ -32,15 +32,15 @@ class DrinkRecipe extends Component {
             <p>Ingredients:</p>
             <ul> { ingredientElements } </ul>
             <p>{this.props.recipe.strInstructions}</p>
-            <button className='add-favorite-button' id={this.props.recipe.idDrink} onClick={this.toggleFavorite}>Add Favorite</button>
+            <button className='favorite-button' id={this.props.recipe.idDrink} onClick={this.toggleFavorite}>Favorite</button>
           </div>
-          <div>
+          <div className='image-wrapper'>
             <img className='drink-recipe-image' src={this.props.recipe.strDrinkThumb} alt={`${this.props.recipe.strDrink}-image`}/>
           </div>
         </div>
       )
     } else {
-      return ''
+      return <h2 className='error-message'>Ooops...something went wrong!</h2>
     }
   }
 }
