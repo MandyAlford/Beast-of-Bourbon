@@ -7,6 +7,8 @@ Beast of Bourbon is a cocktail recipe application for bourbon lovers. Users can 
 ## Screenshots
 <img width="1432" alt="Screen Shot 2020-04-20 at 6 23 18 PM" src="https://user-images.githubusercontent.com/54858455/79812190-69d08500-8335-11ea-8067-70c57893699a.png">
 
+<img width="1348" alt="Screen Shot 2020-04-20 at 7 58 46 PM" src="https://user-images.githubusercontent.com/54858455/79816866-6f33cc80-8341-11ea-8ad9-e0981c4a2fce.png">
+
 ## Setup
 
 - Clone this respository
