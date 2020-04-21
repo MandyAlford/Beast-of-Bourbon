@@ -26,26 +26,28 @@ describe('App', () => {
           }
       ]
     })
-    fetchDrinkRecipe.mockResolvedValue([
-      {
-          "idDrink": "11021",
-          "strDrink": "Allegheny",
-          "strCategory": "Ordinary Drink",
-          "strGlass": "Cocktail glass",
-          "strInstructions": "Shake all ingredients",
-          "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uwvyts1483387934.jpg",
-          "strIngredient1": "Dry Vermouth",
-          "strIngredient2": "Bourbon",
-          "strIngredient3": "Blackberry brandy",
-          "strIngredient4": "Lemon juice",
-          "strIngredient5": "Lemon peel",
-          "strMeasure1": "1 oz ",
-          "strMeasure2": "1 oz ",
-          "strMeasure3": "1 1/2 tsp ",
-          "strMeasure4": "1 1/2 tsp ",
-          "strMeasure5": "1 twist of ",
-          }
-    ])
+    fetchDrinkRecipe.mockResolvedValue({
+      drinks: [
+        {
+            "idDrink": "11021",
+            "strDrink": "Allegheny",
+            "strCategory": "Ordinary Drink",
+            "strGlass": "Cocktail glass",
+            "strInstructions": "Shake all ingredients",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/uwvyts1483387934.jpg",
+            "strIngredient1": "Dry Vermouth",
+            "strIngredient2": "Bourbon",
+            "strIngredient3": "Blackberry brandy",
+            "strIngredient4": "Lemon juice",
+            "strIngredient5": "Lemon peel",
+            "strMeasure1": "1 oz ",
+            "strMeasure2": "1 oz ",
+            "strMeasure3": "1 1/2 tsp ",
+            "strMeasure4": "1 1/2 tsp ",
+            "strMeasure5": "1 twist of ",
+            }
+      ]
+    })
 
     const { getByText } = render(
       <Provider store={store}>
@@ -57,7 +59,15 @@ describe('App', () => {
     await waitFor(() => expect(getByText('Allegheny')).toBeInTheDocument());
     await waitFor(() => expect(getByText('Bourbon Sour')).toBeInTheDocument());
 
+    // console.log(getByText('Allegheny'))
     fireEvent.click(getByText('Allegheny'))
-    // expect(getByText('Glassware: Cocktail glass')).toBeInTheDocument();
+    await waitFor(() => expect(getByText('Glassware: Cocktail glass')).toBeInTheDocument());
+    expect(getByText('Favorite')).toBeInTheDocument();
+
+    fireEvent.click(getByText('Favorite'))
+    expect(getByText('View Favorites')).toBeInTheDocument();
+    fireEvent.click(getByText('View Favorites'))
+     // favorite a drinks
+     // see that it is listed in favorites page
   })
 })
