@@ -1,11 +1,5 @@
 language: node_js
 node_js:
-- node
+  - "node"
 notifications:
   email: false
-deploy:
-  provider: heroku
-  api_key:
-    secure: gccZ24Tpl3WR2tsUOo4wZPbScpy1cOoNugM2tzbDzEYUMGAjQdQJuMk8YVjIxQf9FUcKDjNRtCRtEtNmzKP36Nl7clJCUpZefMlTqfPoqClWnGM2cZPUcUIMt2f1x8hU4oS+0kglr4zBH1YcrPAsblQh0uKRIZaoAYmEZ/bKwwuBoWxzwHlHKMubAAYhC1U5qkSM7BTFZaSLwEqCwmpN6+/BsCr326dLEJx0VVFwQgApINw73wOY9vNz9GWcGLQD3BLUKD8GM+fPmB5jLldG2xmi/MKbp40QTJdWRZQQzleeYDJieXUjaW5jWDomvwP3X7IuzFpeTIUq8NVa/9saZuo4gZeqaCO1IbP7jjtNBdH9vqCePF+TN4U6f7oEyuv2KxE6aSn8dFabHgMKW5KQQ4kRB+IjEKv2BLFgvccbgFzEaMgzj4qerMBzsrE9u29t1mdUN1Xf04v3gNIm4gwp2Wi9mhZbuCz8aW4+S3+HJ9m44aLhbCiY9zaaU14zZWxgHylAJxYY2PgKjSJy9f7Jns9TlLxTnfP9d6IKZ8fUv8OiqQmnl+dX2hVrYHd3xw3eJMbegzifLeN6EkqQN7mBthOTypuqJ6uQE9PAMLNSpHenA2TQ9laSuVJQopvhbBQgygfqZh1wQTBp3UoHjX6HVNT7g8S4dJDt5DLAdLucQ/g=
-  app: beast-of-bourbon
-  skip_cleanup: true
