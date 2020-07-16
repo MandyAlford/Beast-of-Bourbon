@@ -13,7 +13,6 @@ class DrinkCard extends Component {
 getDrinkDetails = (event) => {
   let drinkId = event.target.parentElement.id
   fetchDrinkRecipe(drinkId).then((data) => {
-    // console.log('data', data)
     this.props.setCurrentRecipe(data.drinks[0])
     this.props.history.push(`/drinks/${drinkId}`)
   })
