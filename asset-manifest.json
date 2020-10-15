@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Beast-of-Bourbon/static/css/main.ea8a1bc0.chunk.css",
+    "main.js": "/Beast-of-Bourbon/static/js/main.815c0317.chunk.js",
+    "main.js.map": "/Beast-of-Bourbon/static/js/main.815c0317.chunk.js.map",
+    "runtime-main.js": "/Beast-of-Bourbon/static/js/runtime-main.c37337df.js",
+    "runtime-main.js.map": "/Beast-of-Bourbon/static/js/runtime-main.c37337df.js.map",
+    "static/js/2.3dd78fce.chunk.js": "/Beast-of-Bourbon/static/js/2.3dd78fce.chunk.js",
+    "static/js/2.3dd78fce.chunk.js.map": "/Beast-of-Bourbon/static/js/2.3dd78fce.chunk.js.map",
+    "index.html": "/Beast-of-Bourbon/index.html",
+    "precache-manifest.8cc2701859f6a8846e736483ec16dd6f.js": "/Beast-of-Bourbon/precache-manifest.8cc2701859f6a8846e736483ec16dd6f.js",
+    "service-worker.js": "/Beast-of-Bourbon/service-worker.js",
+    "static/css/main.ea8a1bc0.chunk.css.map": "/Beast-of-Bourbon/static/css/main.ea8a1bc0.chunk.css.map",
+    "static/js/2.3dd78fce.chunk.js.LICENSE.txt": "/Beast-of-Bourbon/static/js/2.3dd78fce.chunk.js.LICENSE.txt",
+    "static/media/bartender.jpg": "/Beast-of-Bourbon/static/media/bartender.d8754843.jpg",
+    "static/media/bourbon.svg": "/Beast-of-Bourbon/static/media/bourbon.e5ec81b5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c37337df.js",
+    "static/js/2.3dd78fce.chunk.js",
+    "static/css/main.ea8a1bc0.chunk.css",
+    "static/js/main.815c0317.chunk.js"
+  ]
+}
